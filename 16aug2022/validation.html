@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<script>
+    function validate(myForm) {
+        console.log(myForm);
+        if (myForm.name.value == "" || myForm.name.value == null) {
+            alert("Name required");
+            return false;
+        }
+        if (myForm.number.value == "" || myForm.number.value == null) {
+            alert("Number required");
+            return false;
+        } else {
+            return true;
+        }
+    }
+</script>
+
+<body>
+    <form method="get" action="check.html" name="formName" onsubmit="return validate(formName)">
+        <p>Name: <input name="name" type="text" /></p>
+        <p>Phone Number: <input name="number" type="text" /></p>
+        <input type="submit" value="submit" />
+        <input type="reset" value="clear" />
+    </form>
+</body>
+
+</html>
